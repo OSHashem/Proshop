@@ -1,0 +1,37 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "eCommerce application built with MERN stack",
+  "homepage": "https://github.com/OSHashem/Proshop#readme",
+  "bugs": {
+    "url": "https://github.com/OSHashem/Proshop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSHashem/Proshop.git"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import":"node backend/seeder.js",
+    "data:destroy":"node backend/seeder.js -d"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.6.0",
+    "mongoose": "^9.10.0",
+    "mongose": "^0.0.2-security"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
